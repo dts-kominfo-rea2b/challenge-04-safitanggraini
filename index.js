@@ -12,18 +12,26 @@ const dates = [
 const createDate = (dates, posisi) => {
   let seconds = [];
   let detik;
-    if(posisi == null){
-      for(posisi = 0; posisi < dates.length; posisi++){
-        seconds[posisi] = Math.floor(Date.parse(dates[posisi])/1000);
-        seconds.sort();
-        detik = seconds.join("-");
-      }
-      return detik;
-    }else{
-      detik = Math.floor(Date.parse(dates[posisi])/1000);
+  if (posisi == null) {
+    for (posisi = 0; posisi < dates.length; posisi++) {
+      seconds[posisi] = Math.floor(Date.parse(dates[posisi]) / 1000);
+      seconds.sort();
+      detik = seconds.join("-");
+      // detik = detik.toString();
     }
+    // return detik;
+  } else {
+    detik = Math.floor(Date.parse(dates[posisi]) / 1000);
+    // detik =  detik.toString();
+
+  }
+
   return detik;
+
 };
+
+// console.log(typeof(createDate?.(dates)));
+
 
 
 // ! JANGAN DIMODIFIKASI
