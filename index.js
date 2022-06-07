@@ -22,7 +22,7 @@ const createDate = (dates, posisi) => {
     // return detik;
   } else {
     detik = Math.floor(Date.parse(dates[posisi]) / 1000);
-    // detik =  detik.toString();
+    detik =  detik.toString();
 
   }
 
@@ -30,7 +30,7 @@ const createDate = (dates, posisi) => {
 
 };
 
-// console.log(typeof(createDate?.(dates)));
+console.log(typeof(createDate?.(dates,2)));
 
 
 
