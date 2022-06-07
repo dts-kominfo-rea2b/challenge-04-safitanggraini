@@ -8,7 +8,23 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+
+const createDate = (dates, posisi) => {
+  let seconds = [];
+  let detik;
+    if(posisi == null){
+      for(posisi = 0; posisi < dates.length; posisi++){
+        seconds[posisi] = Math.floor(Date.parse(dates[posisi])/1000);
+        seconds.sort();
+        detik = seconds.join("-");
+      }
+      return detik;
+    }else{
+      detik = Math.floor(Date.parse(dates[posisi])/1000);
+    }
+  return detik;
+};
+
 
 // ! JANGAN DIMODIFIKASI
 (() => {
